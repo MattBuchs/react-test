@@ -7,8 +7,12 @@ function handleClick(plantName) {
 
 function PlantItem({ cover, name, water, light }) {
 	return (
-		<li className='lmj-plant-item' onClick={() => handleClick(name)}>
-			<img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
+		<li className='lmj-plant-item'>
+			<img 
+			className='lmj-plant-item-cover'
+			src={cover} 
+			onClick={() => handleClick(name)}
+			alt={`${name} cover`} />
 			{name}
 			<div>
 				<CareScale careType='water' scaleValue={water} />
